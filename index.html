@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#BBD1F3">
+    <meta name="description" content="Le portfolio d’Amani Kouadio Christ-Manassé, étudiant en développement d’applications et e-services.">
+    <title>Amani Kouadio Christ-Manassé — Mon univers</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicons/icon-512.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="vendor/gsap.min.js" defer></script>
+    <script src="vendor/ScrollTrigger.min.js" defer></script>
+    <script src="vendor/MotionPathPlugin.min.js" defer></script>
+    <script src="data/contenu.js" defer></script>
+    <script src="data/personnes.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="welcome" id="accueil">
+      <div class="sky-grain" aria-hidden="true"></div>
+
+      <section class="intro" aria-labelledby="hero-title">
+        <p class="welcome-line"><span aria-hidden="true"></span>Bienvenue dans mon univers</p>
+        <h1 id="hero-title">Amani Kouadio<br>Christ-Manassé</h1>
+        <p class="subtitle">Étudiant en développement d'applications et e-services</p>
+        <p class="motto">« Apprendre, concevoir, innover et créer de la valeur. »</p>
+      </section>
+
+      <svg class="opening-map" viewBox="0 0 390 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="skyFade" x1="195" y1="0" x2="195" y2="600" gradientUnits="userSpaceOnUse">
+            <stop stop-color="var(--sky)" stop-opacity="0"/>
+            <stop offset=".58" stop-color="var(--sky)" stop-opacity=".2"/>
+            <stop offset="1" stop-color="var(--land)" stop-opacity=".34"/>
+          </linearGradient>
+          <linearGradient id="landFade" x1="195" y1="340" x2="195" y2="600" gradientUnits="userSpaceOnUse">
+            <stop stop-color="var(--land)"/>
+            <stop offset="1" stop-color="var(--deep)"/>
+          </linearGradient>
+        </defs>
+        <rect width="390" height="600" fill="url(#skyFade)"/>
+        <g class="cloud cloud-one" fill="var(--map-white)" opacity=".72" aria-hidden="true">
+          <path d="M38 132c0-10 11-17 23-16 7-10 22-10 30 0 13-2 22 5 22 14 0 8-8 12-20 12H54c-10 0-16-3-16-10Z"/>
+        </g>
+        <g class="cloud cloud-two" fill="var(--map-white)" opacity=".48" aria-hidden="true">
+          <path d="M264 190c0-8 8-13 18-12 6-8 18-8 24 0 10-1 17 4 17 11 0 6-6 9-15 9h-31c-8 0-13-3-13-8Z"/>
+        </g>
+        <g class="aircraft" transform="translate(298 93)" fill="var(--map-white)" aria-hidden="true">
+          <path d="m0 10 26-9 4 3-14 10 12 3 2 4-9-1-12 8-2-2 4-8L0 10Z"/>
+          <path d="m-26 18 22-5" fill="none" stroke="var(--map-white)" stroke-dasharray="3 4" stroke-width="1.5" opacity=".65"/>
+        </g>
+
+        <path d="M-30 432c58-32 103-20 174-34 84-16 160 13 277-9v211H-30V432Z" fill="var(--deep)" opacity=".65"/>
+        <path d="M-25 475c66-39 111-35 178-28 78 8 132-34 267-4v157H-25V475Z" fill="url(#landFade)"/>
+        <path d="M36 522c83-22 122-3 192-24 51-16 105-27 175-13v115H36V522Z" fill="var(--night)" opacity=".55"/>
+
+        <g class="basilica" transform="translate(194 314)" aria-hidden="true">
+          <path d="M-50 111h100c-1-8-10-13-23-16h-54c-13 3-22 8-23 16Z" fill="var(--map-white)"/>
+          <path d="M-37 100v11m14-11v11m14-11v11m18-11v11m14-11v11m14-11v11" stroke="var(--deep)" stroke-width="4"/>
+          <path d="M-34 97c0-34 68-34 68 0v4h-68v-4Z" fill="var(--map-white)"/>
+          <path d="M-18 100c0-26 36-26 36 0" fill="none" stroke="var(--sky)" stroke-width="5"/>
+          <path d="M-4 64h8v9h-8z" fill="var(--map-white)"/>
+          <circle cy="59" r="3" fill="var(--signal)"/>
+          <path d="M-1 43h2v5h5v2H1v5h-2v-5h-5v-2h5v-5Z" fill="var(--map-white)"/>
+        </g>
+
+        <path d="M54 471c36-34 78-37 116-20 45 19 89-25 161-7" fill="none" stroke="var(--map-white)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 9" opacity=".94"/>
+        <path d="M54 471c36-34 78-37 116-20 45 19 89-25 161-7" fill="none" stroke="var(--land)" stroke-width="1.5" opacity=".5"/>
+        <g class="beacons" aria-hidden="true">
+          <circle cx="111" cy="440" r="3" fill="var(--signal)"/><circle cx="111" cy="440" r="7" fill="none" stroke="var(--signal)" opacity=".55"/>
+          <circle cx="220" cy="455" r="3" fill="var(--map-white)"/><circle cx="220" cy="455" r="7" fill="none" stroke="var(--map-white)" opacity=".45"/>
+          <circle cx="310" cy="442" r="3" fill="var(--signal)"/><circle cx="310" cy="442" r="7" fill="none" stroke="var(--signal)" opacity=".55"/>
+        </g>
+      </svg>
+
+      <div class="departure" id="depart">
+        <div class="portrait-wrap">
+          <img class="portrait" src="img/manasse.jpeg" alt="Portrait d’Amani Kouadio Christ-Manassé" width="72" height="72">
+          <span class="compass" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 11 22 2l-9 20-2-9-8-2Z"/></svg>
+          </span>
+        </div>
+      </div>
+
+      <a class="discover" href="#a-propos">
+        <span>Découvrir mon histoire</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15m-7-7 7 7-7 7"/></svg>
+      </a>
+    </main>
+
+    <section class="about-section reveal" id="a-propos" aria-labelledby="about-heading">
+      <div class="about-layout">
+        <img class="about-portrait" src="img/manasse.jpeg" alt="Amani Kouadio Christ-Manassé" width="120" height="120" loading="lazy">
+        <div class="about-copy">
+          <h2 id="about-heading">À propos</h2>
+          <div id="bio-paragraphs"></div>
+          <p class="about-motto" id="about-motto"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="interests-section reveal" aria-labelledby="interests-heading">
+      <div class="interests-layout">
+        <h2 id="interests-heading">Centres d'intérêt et ambition</h2>
+        <ul class="interest-list" id="interest-list"></ul>
+        <aside class="ambition-card" aria-label="Ambition">
+          <p><strong>Ambition :</strong> <span id="ambition-text"></span></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="journey" id="parcours" aria-labelledby="journey-heading" tabindex="-1">
+      <h2 class="visually-hidden" id="journey-heading">Parcours</h2>
+      <svg class="journey-art" viewBox="0 0 390 3120" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="island-shade" x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="var(--island-light)"/>
+            <stop offset="1" stop-color="var(--land)"/>
+          </linearGradient>
+          <linearGradient id="sea-shade" x1="0" y1="0" x2="0" y2="1">
+            <stop stop-color="var(--land)"/>
+            <stop offset="1" stop-color="var(--deep)"/>
+          </linearGradient>
+          <clipPath id="traveler-clip"><circle r="27"/></clipPath>
+        </defs>
+        <rect width="390" height="3120" fill="var(--sky)"/>
+        <g class="map-cloud cloud-drift-a" fill="var(--map-white)" opacity=".8">
+          <path d="M18 130c0-14 16-24 31-21 10-14 31-14 42 0 17-2 30 7 30 20 0 11-11 17-28 17H40c-14 0-22-5-22-16Z"/>
+        </g>
+        <g class="map-cloud cloud-drift-b" fill="var(--map-white)" opacity=".6">
+          <path d="M240 560c0-11 13-18 25-16 7-11 25-11 34 0 14-2 23 6 23 15 0 9-9 13-22 13h-41c-11 0-19-4-19-12Z"/>
+        </g>
+        <g class="map-cloud cloud-drift-c" fill="var(--map-white)" opacity=".55">
+          <path d="M20 1530c0-10 12-17 23-15 7-10 22-10 29 0 12-1 21 5 21 14 0 8-8 12-20 12H37c-10 0-17-4-17-11Z"/>
+        </g>
+
+        <g class="island-shapes">
+          <path d="M-68 34C7-7 99 7 151 62c45 47 67 77 128 78 60 2 121 31 148 82v215c-67 51-133 10-195 34-76 30-134 9-206-15-53-18-87-42-112-87V95Z" fill="url(#island-shade)" opacity=".82"/>
+          <path d="M-28 204c54-48 114-37 159-9 43 27 92 38 160 15 53-18 100-5 148 30v116c-53 31-94 4-149 23-65 22-110 50-182 27-65-20-110-49-157-38Z" fill="var(--land)" opacity=".42"/>
+
+          <path d="M215 482c71-46 142-25 191 17v386c-48 44-91 32-137 58-54 31-109 20-157-16-56-43-93-91-87-166 7-87 73-104 112-172 24-42 31-77 78-107Z" fill="url(#island-shade)" opacity=".85"/>
+          <path d="M241 635c64-45 121-26 165 5v174c-56 37-89 22-140 53-51 31-100 5-133-29-34-35-38-86-9-126 31-44 69-38 117-77Z" fill="var(--land)" opacity=".48"/>
+
+          <path d="M-66 1018c52-59 129-83 197-50 65 31 79 82 153 97 65 14 107 52 130 107v177c-48 47-109 45-160 20-67-34-117-8-179 11-63 20-119-10-159-53-50-54-40-142 18-201Z" fill="url(#island-shade)" opacity=".85"/>
+          <path d="M-18 1157c61-47 110-56 166-21 50 31 100 27 157 48 50 18 77 48 97 85v85c-63 36-110-5-165-25-61-22-104 22-164 26-57 4-113-27-132-69-22-47-7-96 41-129Z" fill="var(--land)" opacity=".45"/>
+
+          <path d="M196 1521c57-46 127-25 188 14v361c-61 39-105 15-156 50-55 38-126 16-176-22-62-46-91-113-57-180 33-65 82-67 130-139 19-29 34-65 71-84Z" fill="url(#island-shade)" opacity=".86"/>
+          <path d="M209 1692c50-35 102-35 175 5v133c-58 28-92 22-145 54-53 33-97 3-121-31-25-35-18-83 17-112 25-20 48-29 74-49Z" fill="var(--land)" opacity=".45"/>
+
+          <path d="M-46 2032c59-64 137-73 208-42 53 23 105 32 161 62 51 27 76 68 89 119v182c-62 45-112 8-168 13-66 6-105 51-180 41-74-10-131-68-144-133-15-78-13-175 34-242Z" fill="url(#island-shade)" opacity=".84"/>
+          <path d="M-14 2227c59-61 118-56 175-34 68 27 110 17 173 54 44 26 63 57 78 93-64 42-108 6-170 9-64 3-102 48-166 38-59-9-98-45-110-87-8-29 0-52 20-73Z" fill="var(--land)" opacity=".44"/>
+
+          <path d="M196 2522c58-53 126-46 190-7v353c-56 37-105 7-158 31-62 28-130 12-171-29-43-43-60-103-25-162 34-57 90-78 127-134 12-19 20-36 37-52Z" fill="url(#island-shade)" opacity=".84"/>
+          <path d="M212 2697c52-43 108-36 174 7v131c-57 27-93 16-146 45-50 27-99 1-120-35-20-36-10-76 22-102 26-21 48-28 70-46Z" fill="var(--land)" opacity=".48"/>
+        </g>
+
+        <path d="M-20 2864c74 26 126 15 195 29 82 16 151-5 235 24v203H-20v-256Z" fill="url(#sea-shade)"/>
+        <path d="M-10 2922c90-21 153 20 240 3 66-13 109-5 170 16M-12 2992c65-15 127 10 194 1 71-10 145 7 225 23" fill="none" stroke="var(--sea-line)" stroke-width="3" stroke-linecap="round" opacity=".52"/>
+
+        <g transform="translate(262 350)" fill="var(--map-white)">
+          <g class="ambient-plane">
+            <path d="m0 10 28-9 4 3-15 10 13 4 2 4-10-2-12 8-2-2 4-8L0 10Z"/>
+          </g>
+        </g>
+        <g transform="translate(35 1930)" fill="var(--deep)" stroke="var(--map-white)" stroke-width="2">
+          <g class="ambient-heli">
+            <path d="M7 17h25c5 0 8 4 7 8H4c-2-4-1-8 3-8Zm9-7h8l4 7H12l4-7Zm-3-4h15M8 8h28M15 25l-3 6m21-6 4 6" stroke-linecap="round"/>
+          </g>
+        </g>
+        <g transform="translate(270 2940)">
+          <g class="ambient-boat boat-rock">
+            <path d="M0 18h64l-10 14H12L0 18Z" fill="var(--night)"/>
+            <path d="M29 1v17H9L29 1Z" fill="var(--map-white)"/>
+            <path d="M33 5v13h17L33 5Z" fill="var(--island-light)"/>
+          </g>
+        </g>
+        <g transform="translate(62 3025) scale(.72)">
+          <g class="ambient-boat boat-rock boat-second">
+            <path d="M0 18h64l-10 14H12L0 18Z" fill="var(--night)"/>
+            <path d="M29 1v17H9L29 1Z" fill="var(--map-white)"/>
+            <path d="M33 5v13h17L33 5Z" fill="var(--island-light)"/>
+          </g>
+        </g>
+
+        <path id="journey-route" class="journey-route" d="M310 260C310 480 78 535 78 780S312 1055 312 1300 78 1575 78 1820 312 2095 312 2340 78 2615 78 2860"/>
+
+        <g id="waypoints" class="waypoints" fill="var(--signal)">
+          <circle cx="310" cy="260" r="6"/><circle cx="78" cy="780" r="6"/>
+          <circle cx="312" cy="1300" r="6"/><circle cx="78" cy="1820" r="6"/>
+          <circle cx="312" cy="2340" r="6"/><circle cx="78" cy="2860" r="6"/>
+        </g>
+        <g id="waypoint-rings" class="waypoint-rings" fill="none" stroke="var(--signal)">
+          <circle cx="310" cy="260" r="15"/><circle cx="78" cy="780" r="15"/>
+          <circle cx="312" cy="1300" r="15"/><circle cx="78" cy="1820" r="15"/>
+          <circle cx="312" cy="2340" r="15"/><circle cx="78" cy="2860" r="15"/>
+        </g>
+
+        <g class="traveler" id="traveler" transform="translate(310 260)">
+          <circle r="36" fill="var(--signal)" opacity=".22" class="traveler-halo"/>
+          <circle r="32" fill="var(--map-white)" stroke="var(--deep)" stroke-width="3"/>
+          <image href="img/manasse.jpeg" x="-27" y="-27" width="54" height="54" preserveAspectRatio="xMidYMid slice" clip-path="url(#traveler-clip)"/>
+        </g>
+      </svg>
+
+      <div class="journey-stops">
+        <article class="journey-stop stop-right" data-step="0" data-route-x="0.8">
+          <div class="stop-card">
+            <svg class="stop-vignette" viewBox="0 0 120 82" aria-hidden="true"><path d="M7 72h106"/><path d="M26 67h68l-8-8H34l-8 8Z"/><path d="M38 58c0-19 44-19 44 0v4H38v-4Z"/><path d="M51 58c0-13 18-13 18 0"/><path d="M58 36h4v8h-4z"/><path d="M60 22v13m-8-8h16"/></svg>
+            <h3 class="stop-title">Yamoussoukro</h3>
+            <p class="stop-period">Naissance</p>
+            <img class="stop-portrait" src="img/manasse.jpeg" alt="Amani Kouadio Christ-Manassé" loading="lazy" width="64" height="64">
+          </div>
+        </article>
+        <article class="journey-stop stop-left" data-step="1" data-route-x="0.2">
+          <div class="stop-card">
+            <svg class="stop-vignette" viewBox="0 0 120 82" aria-hidden="true"><path d="M8 70h104"/><path d="m19 49 20-16 21 16v20H19V49Zm42 3 17-14 22 14v17H61V52Z"/><path d="M29 70V55h12v15m28 0V57h12v13m15-24v11"/><path d="M8 37c10-9 17-8 25-2m67-9c8-6 13-5 19-1"/></svg>
+            <h3 class="stop-title">Bonoufla</h3>
+            <p class="stop-period">CP1 au CE2</p>
+            <img class="stop-portrait" src="img/manasse.jpeg" alt="Amani Kouadio Christ-Manassé" loading="lazy" width="64" height="64">
+          </div>
+        </article>
+        <p class="encounter-intro" id="encounter-introduction"></p>
+        <article class="journey-stop stop-right journey-stop--people" data-step="2" data-route-x="0.8" data-stage="daloa">
+          <div class="stop-card">
+            <svg class="stop-vignette" viewBox="0 0 120 82" aria-hidden="true"><path d="M8 70h104"/><path d="m22 70 12-30h48l14 30H22Z"/><path d="M39 40c0-10 8-17 17-17s17 7 17 17m-24 0V29m14 11V29m-9 22h5v7h-5z"/><path d="M19 31c7-7 14-9 21-7m41-6c8 0 14 3 18 8"/></svg>
+            <h3 class="stop-title">Daloa</h3>
+            <p class="stop-period">CM1 à la 6ème</p>
+            <img class="stop-portrait" src="img/manasse.jpeg" alt="Amani Kouadio Christ-Manassé" loading="lazy" width="64" height="64">
+          </div>
+          <div class="person-list" data-stage="daloa"></div>
+        </article>
+        <article class="journey-stop stop-left journey-stop--people" data-step="3" data-route-x="0.2" data-stage="soubre">
+          <div class="stop-card">
+            <svg class="stop-vignette" viewBox="0 0 120 82" aria-hidden="true"><path d="M8 70h104"/><path d="M16 55h88v15H16z"/><path d="M26 55V31h68v24M37 39h12v16H37zm22 0h12v16H59zm22 0h8v16h-8"/><path d="M12 28c18-8 33-6 47 0s29 5 49-3M12 19c12-5 25-5 35 0"/></svg>
+            <h3 class="stop-title">Soubré</h3>
+            <p class="stop-period">5ème à la Terminale D</p>
+            <img class="stop-portrait" src="img/manasse.jpeg" alt="Amani Kouadio Christ-Manassé" loading="lazy" width="64" height="64">
+          </div>
+          <div class="person-groups" data-stage="soubre"></div>
+        </article>
+        <article class="journey-stop stop-right" data-step="4" data-route-x="0.8">
+          <div class="stop-card">
+            <svg class="stop-vignette" viewBox="0 0 120 82" aria-hidden="true"><path d="M8 70h104"/><rect x="20" y="18" width="80" height="49" rx="5"/><path d="M28 26h64v32H28zM48 74h24m-12-7v7"/><circle cx="45" cy="42" r="4"/><circle cx="60" cy="42" r="4"/><circle cx="75" cy="42" r="4"/></svg>
+            <h3 class="stop-title">UVCI</h3>
+            <p class="stop-period">Licence 2</p>
+            <img class="stop-portrait" src="img/manasse.jpeg" alt="Amani Kouadio Christ-Manassé" loading="lazy" width="64" height="64">
+          </div>
+        </article>
+        <article class="journey-stop stop-left journey-stop--global" data-step="5" data-route-x="0.2" data-stage="ailleurs">
+          <div class="stop-card">
+            <svg class="stop-vignette" viewBox="0 0 120 82" aria-hidden="true"><path d="M8 68c22-8 37-4 57 0s34 4 47-1v15H8V68Z"/><path d="M22 61c10-14 24-17 34-8 9 8 18 9 28 0s19-9 29-1"/><circle cx="28" cy="28" r="4"/><circle cx="56" cy="20" r="4"/><circle cx="83" cy="30" r="4"/><circle cx="103" cy="17" r="4"/></svg>
+            <h3 class="stop-title">Un peu partout en Côte d'Ivoire</h3>
+            <p class="stop-period">2025 et 2026</p>
+            <img class="stop-portrait" src="img/manasse.jpeg" alt="Amani Kouadio Christ-Manassé" loading="lazy" width="64" height="64">
+          </div>
+          <div class="country-map" id="country-map" role="group" aria-label="Repères des rencontres à travers la Côte d'Ivoire">
+            <svg class="country-silhouette" viewBox="0 0 390 520" aria-hidden="true">
+              <path d="M73 42 125 28l39 11 42-10 51 19 47 9 34 41-13 37 19 43-18 40 11 52-19 44 2 53-30 31-22 54-50 10-39-15-34 17-46-11-35-33-17-47-13-44 6-52-10-48 15-48-8-44Z" fill="var(--island-light)" stroke="var(--deep)" stroke-width="5" stroke-linejoin="round"/>
+              <path d="M96 92c40 11 54-5 78 3 27 9 37 31 65 27s41 18 66 11M67 226c41-13 58-5 85 4s47-12 70 2 44 5 78-8M102 357c28-21 55-17 80-5s45-9 69-1" fill="none" stroke="var(--land)" stroke-width="5" stroke-linecap="round" opacity=".72"/>
+            </svg>
+            <div class="global-beacons" id="global-beacons"></div>
+          </div>
+          <section class="global-timeline" aria-labelledby="global-timeline-heading">
+            <h3 class="global-timeline-heading" id="global-timeline-heading">Les rencontres au fil du temps</h3>
+            <div class="global-people-list" id="global-people-list"></div>
+          </section>
+        </article>
+        <p class="encounter-conclusion" id="encounter-conclusion"></p>
+      </div>
+    </section>
+
+    <section class="birthday-finale" id="happy-birthday" aria-labelledby="birthday-title">
+      <div class="birthday-glow birthday-glow--one" aria-hidden="true"></div>
+      <div class="birthday-glow birthday-glow--two" aria-hidden="true"></div>
+      <div class="birthday-decorations" id="birthday-decorations" aria-hidden="true">
+        <span class="birthday-star birthday-star--one">✦</span>
+        <span class="birthday-star birthday-star--two">✧</span>
+        <span class="birthday-star birthday-star--three">✦</span>
+        <span class="birthday-star birthday-star--four">✧</span>
+        <span class="birthday-balloon birthday-balloon--one"></span>
+        <span class="birthday-balloon birthday-balloon--two"></span>
+        <span class="birthday-balloon birthday-balloon--three"></span>
+        <span class="birthday-balloon birthday-balloon--four"></span>
+        <span class="birthday-streamer birthday-streamer--one"></span>
+        <span class="birthday-streamer birthday-streamer--two"></span>
+        <span class="birthday-streamer birthday-streamer--three"></span>
+        <span class="birthday-gift birthday-gift--one"><i></i></span>
+        <span class="birthday-gift birthday-gift--two"><i></i></span>
+        <span class="birthday-gift birthday-gift--three"><i></i></span>
+        <span class="birthday-spark birthday-spark--one"></span>
+        <span class="birthday-spark birthday-spark--two"></span>
+        <span class="birthday-spark birthday-spark--three"></span>
+        <span class="birthday-spark birthday-spark--four"></span>
+        <div class="birthday-confetti" id="birthday-confetti"></div>
+      </div>
+      <div class="birthday-content">
+        <div class="birthday-portrait-wrap">
+          <img class="birthday-portrait" src="img/manasse.jpeg" alt="Amani Kouadio Christ-Manassé" width="1536" height="1024" loading="lazy">
+        </div>
+        <p class="birthday-name">Amani Kouadio Christ-Manassé</p>
+        <h2 id="birthday-title">HAPPY BIRTHDAY TO ME !</h2>
+        <h3>Joyeux anniversaire à moi-même !</h3>
+        <p class="birthday-message">Une année de plus, une histoire qui continue, des rêves à réaliser et de nouvelles pages à écrire. Le meilleur reste à venir.</p>
+        <button class="birthday-start" id="birthday-start" type="button">Célébrer mon anniversaire</button>
+        <div class="birthday-player" aria-label="Lecteur de musique d'anniversaire">
+          <button class="birthday-music-toggle" id="birthday-music-toggle" type="button" aria-pressed="false">Activer la musique</button>
+          <label class="birthday-volume"><span>Volume</span><input id="birthday-volume" type="range" min="0" max="1" step="0.05" value="0.7"></label>
+          <div class="birthday-visualizer" id="birthday-visualizer" role="img" aria-label="Visualisation audio, inactive">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <audio id="birthday-audio" preload="none" loop></audio>
+          <p class="birthday-credit" id="birthday-credit"></p>
+        </div>
+        <button class="birthday-replay" id="birthday-replay" type="button">Rejouer la célébration</button>
+      </div>
+    </section>
+
+    <dialog class="person-dialog" id="person-dialog" aria-label="Carte de rencontre">
+      <div class="sheet-handle" aria-hidden="true"></div>
+      <button class="dialog-close" type="button" aria-label="Fermer">×</button>
+      <div class="dialog-person" id="dialog-person"></div>
+    </dialog>
+  </body>
+</html>
