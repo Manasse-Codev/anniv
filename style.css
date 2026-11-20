@@ -446,6 +446,8 @@ h1 {
   gap: .7rem;
 }
 
+.person-card-heading { min-width: 0; flex: 1 1 auto; }
+
 .person-avatar {
   display: grid;
   width: 4rem;
@@ -823,6 +825,13 @@ h1 {
   .birthday-gift--three { right: 12%; }
 }
 
+@media (max-width: 699px) {
+  .person-card { width: min(100%, 34rem); }
+  .person-card-header { min-width: 0; }
+  .person-card h4 { overflow-wrap: break-word; }
+  .global-story-card.person-card { width: 100%; }
+}
+
 @media (min-width: 700px) {
   .person-list { gap: 1.25rem; }
   .person-card { width: min(68%, 28rem); }
@@ -1098,4 +1107,12 @@ html.cinema-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .cinema-intro *, .cinema-intro *::before, .cinema-intro *::after { scroll-behavior: auto !important; }
   .replay-intro { transition: none; }
+}
+
+/* Keep the intro replay control clear of the primary action at every width. */
+@media (max-width: 699px) {
+  .replay-intro { top: auto; right: 1rem; bottom: max(5.25rem, calc(env(safe-area-inset-bottom) + 4.25rem)); }
+}
+@media (min-width: 700px) {
+  .replay-intro { top: max(1.25rem, env(safe-area-inset-top)); right: max(1.25rem, env(safe-area-inset-right)); bottom: auto; }
 }
