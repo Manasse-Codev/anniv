@@ -9,6 +9,10 @@ Portfolio personnel statique présentant mon parcours, mes centres d’intérêt
 - Ressources locales : photos et vidéo dans `img/`, illustrations, icônes, favicons et audio dans `assets/`
 - Aucune étape de compilation, aucun gestionnaire de dépendances et aucune variable d’environnement nécessaires
 
+## Générique d’ouverture
+
+Une bande-annonce interactive d’environ 36 secondes retrace les origines, les études, les passions, les rencontres et la vision d’Amani. Elle est jouée une fois par onglet, peut être passée ou relancée depuis la page d’accueil, et propose une entrée résumée si le navigateur demande de réduire les animations. Son bande-son est synthétisé localement avec Web Audio et ne démarre qu’après activation explicite; le contrôle de volume est disponible dans le générique.
+
 ## Lancer le site en local
 
 Ouvrez `index.html` dans un navigateur, ou démarrez un serveur HTTP dans le dossier du projet, par exemple :
